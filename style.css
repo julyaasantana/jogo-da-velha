@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: fantasy;
+    font-size: large;
+    background-color: beige;
+    color: hotpink;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.casa {
+    width: 100px;
+    height: 100px;
+
+    background-color: deeppink;
+    border: 2px solid darkmagenta;
+    border-radius: 10px;
+
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.casa:hover {
+    background-color: #720f54;
+}
+
+/* Botão reiniciar jogo */
+#reiniciar {
+    background-color: hotpink;
+    color: #720f54;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reiniciar:hover {
+    background-color: #fdaee3;
+}
+
+/* Tela de vitória */
+.tela-vitoria {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(50, 0, 35, 0.75);
+
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Caixa da mensagem de vitória */
+.caixa-vitoria {
+    background: #ff69b4;
+    border: 3px solid #8b008b;
+    border-radius: 16px;
+
+    padding: 35px 25px;
+    text-align: center;
+
+    width: 100%;
+    max-width: 350px;
+
+    box-shadow: 0 0 20px rgba(139, 0, 139, 0.35);
+}
+
+/* Título da vitória */
+.caixa-vitoria h2 {
+    color: #720f54;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Texto de parabéns */
+.caixa-vitoria p {
+    color: #fff0f5;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+/* Botão jogar novamente */
+#jogarNovamente {
+    background: #720f54;
+    color: #fff0f5;
+
+    border: 2px solid #ffb6c1;
+    border-radius: 8px;
+
+    padding: 12px 18px;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+#jogarNovamente:hover {
+    background: #8b008b;
+    transform: scale(1.05);
+}
